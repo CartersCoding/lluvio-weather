@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+}
+
+header {
+    background-color: white;
+    color: black;
+    margin-top: -22px;
+    text-align: center;
+    margin-left: -20px;
+}
+
+#loc-div {
+    background-color: rgb(0 0 0 / 0.6);
+    color: white;
+    margin-left: -20px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+#current-loc {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+html {
+    background-image: url("partly-cloudy.jpg");
+    background-size: cover;
+}
+
+#cards-div {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.card {
+    background-color: rgb(0 0 0 / 0.65);
+    /* display: flex; */
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.80);
+}
+
+#alerts {
+    background-color: rgba(255, 222, 131, 0.69);
+    color: black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 12px rgba(255, 222, 131, 0.8)
+}
+
+#current-conditions {
+    width: 285px;
+}
+
+/* #condition {
+    font-size: 30px;
+} */
+
+#hourly-forecast {
+    width: 485px;
+}
+
+#conditions-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 10px;
+    line-height: 1px;
+}
+
+#precip-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 10px;
+    line-height: 1px;
+}
+
+#hourly-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#daily-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#lightning-content-area {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+#hourly-content-area strong {
+    display: block;
+    font-size: clamp(11px, 2.5vw, 16px);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+#loc-div .action {
+    background-color: white;
+    color: black;
+    border: 0px;
+}
+
+#loc-div .action-blue {
+    background-color: blue;
+    color: white;
+    border: 0px;
+}
+
+#suggested-locs, #favorite-locs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#loc-div button {
+    background-color: rgb(0 0 0 / 0);
+    border-color: white;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 7px;
+    min-width: 75px;
+    width: fit-content;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: white;
+}
+
+.selected-loc-fill {
+    background-color: white;
+    color: black;
+}
+
+#loc-div button:hover {
+    background-color: black;
+    color: white;
+}
+
+.big-serif {
+    font-size: 75px;
+}
+
+.med-serif {
+    font-size: 50px;
+}
+
+.small-serif {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+
+h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.serif-italics {
+    font-style: italic;
+}
+
+.info-pill {
+    background-color: white;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 30px;
+    width: 100px;
+    text-align: center;
+}
+
+#rain {
+    background-color: #3190b0
+}
+
+#sleet {
+    background-color: gray
+}
+
+#snow {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#precip-pills {
+    display: flex;
+    gap: 6px;
+}
+
+#loc-div input {
+    border-radius: 50px;
+    border-style: solid;
+    border-color: white;
+    padding-left: 5px;
+}
+
+#air-quality, #uv {
+    line-height: 15px;
+}
+
+.stat-pill {
+    padding: 12px;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+#aq-moderate-pill {
+    background-color: green;
+}
+
+#uv-high-pill {
+    background-color: red;
+}
+
+#radar {
+    width: 800px;
+    height: 500px;
+}
+
+#radar-placeholder {
+    text-align: center;
+}
+
+.credits {
+    color: white;
+    text-align: center;
+}
+
+.credits a {
+    color: white;
+}

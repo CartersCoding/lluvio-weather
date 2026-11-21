@@ -1,0 +1,200 @@
+<html>
+    <head>
+        <title>Houston 🌤️72° | lluvia</title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header>
+            <br>
+            <h1><span class="serif-italics">lluvia</span> weather</h1>
+            <!-- <h4>Your weather, your way.</h4>
+            <p>No ads, no accounts, just weather.</p> -->
+            <br>
+        </header>
+
+        <div id="loc-div">
+            <p>MY LOCATION</p>
+            <h1 id="current-loc">Houston, TX</h1>
+            <!-- <button class="action">Add to Favorites</button> -->
+            <br>
+            <br>
+            <div id="suggested-locs">
+                <input id="user-loc" placeholder="Enter a city name"></input>
+                <button class="action">Go</button>
+                <!-- <button class="action-blue">My Location: Houston</button> -->
+                <button class="selected-loc-fill">Houston ☀️</button>
+                <button id="new-york">New York 🌨️</button>
+                <button id="london">London ☁️</button>
+                <button id="tokyo">Tokyo ⛅️</button>
+                <button id="los-angeles">Los Angeles ☀️</button>
+                <button id="dallas">Sydney ⛅️</button>
+            </div>
+            <p>Favorite Locations:</p>
+            <div id="favorite-locs">
+                <button id="add-favorite" class="action">Add Houston</button>
+                <button class="favorite-btn">Dallas ☁️</button>
+                <button class="favorite-btn">Newport Beach ☀️</button>
+            </div>
+            <p>Recent Locations:</p>
+            <div id="recent-locs">
+                <button>Palm Springs ☀️</button>
+                <button>San Francisco 🌧️</button>
+                <button>Madrid ⛈️</button>
+                <button>Tokyo ⛅️</button>
+            </div>
+        </div>
+
+        <div id="alerts">
+            <p>⚠️ <strong>Severe Thunderstorm Warning</strong> in effect until <strong>6:45 PM</strong>. Issued by National Weather Service.</p>
+        </div>
+
+        <div id="summary-div">
+        </div>
+
+        <div id="cards-div">
+            
+            <div class="card" id="current-conditions">
+                <h4 class="card-desc">Current Conditions</h4>
+                <div id="conditions-content-area">
+                <img id="condition-icon" src="partly-cloudy-icon.png" height='75px' width='75px'>
+                <h1 class="big-serif" id="temp">74°</h1>
+                </div>
+                <h3 id="condition" class="small-serif">Loading weather...</h3>
+                <p id="feels-like">Feels Like: -°</p>
+                <p id="jacket-index">Jacket Index: No jacket needed!</p>
+                <p id="humidity">Humidity: 58%</p>
+            </div>
+
+            <div class="card" id="hourly-forecast">
+                <h4 class="card-desc">Hourly Forecast</h4>
+                <div id="hourly-content-area">
+                    <div id="sunrise" class="sun-rise-set">
+                        <strong>Sunrise</strong>
+                        <p id="sunrise-time">6:49 AM</p>
+                    </div>
+                    <div id="7am" class="hour">
+                        <img src="partly-cloudy-icon.png" height='75px' width='75px'>
+                        <p>7 AM</p>
+                        <strong>65°</strong>
+                    </div>
+                    <div id="9am" class="hour">
+                        <img src="partly-cloudy-icon.png" height='75px' width='75px'>
+                        <p>9 AM</p>
+                        <strong>68°</strong>
+                    </div>
+                    <div id="11am" class="hour">
+                        <img src="partly-cloudy-icon.png" height='75px' width='75px'>
+                        <p>11 AM</p>
+                        <strong>72°</strong>
+                    </div>
+                    <div id="1pm" class="hour">
+                        <img src="partly-cloudy-icon.png" height='75px' width='75px'>
+                        <p>1 PM</p>
+                        <strong>74°</strong>
+                    </div>
+                    <div id="3pm" class="hour">
+                        <img src="sunny-icon.png" height='75px' width='75px'>
+                        <p>3 PM</p>
+                        <strong>73°</strong>
+                    </div>
+                    <div id="5pm" class="hour">
+                        <img src="sunny-icon.png" height='75px' width='75px'>
+                        <p>5 PM</p>
+                        <strong>68°</strong>
+                    </div>
+                    <div id="sunset" class="sun-rise-set">
+                        <strong>Sunset</strong>
+                        <p id="sunset-time-text">5:24 PM</p>
+                    </div>
+                    <div id="7pm" class="hour">
+                        <img src="clear-icon.png" height='75px' width='75px'>
+                        <p>7 PM</p>
+                        <strong>65°</strong>
+                    </div>
+                    <div id="9pm" class="hour">
+                        <img src="clear-icon.png" height='75px' width='75px'>
+                        <p>9 PM</p>
+                        <strong>65°</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="precipitation">
+                <h4 class="card-desc" >Precipitation</h4>
+                <div id="precip-content-area">
+                    <h1 class="big-serif" id="precip-amount">0.21"</h1>
+                    <img src="rain-icon.png" height='75px' width='75px'>
+                </div>
+                <p id="precip-chance"><strong>56%</strong> chance of rain today.</p>
+                <div id="precip-pills">
+                    <p class="info-pill" id="rain">Rain<strong> 0.21"</strong></p>
+                    <p class="info-pill" id="sleet">Sleet<strong> 0"</strong></p>
+                    <p class="info-pill" id="snow">Snow<strong> 0"</strong></p>
+                    <!-- Rain, sleet, and snow only show if applicable respectively. -->
+                </div>
+            </div>
+
+            <div class="card" id="daily-forecast">
+                <h4 class="card-desc">4-Day Forecast</h4>
+                <div id="daily-content-area">
+                    <div class="day" id="tomorrow">
+                        <img src="partly-cloudy-icon.png" height='75px' width='75px'>
+                        <p class="day">Tomorrow</p>
+                        <strong>72° / 78°</strong>
+                    </div>
+                    <div class="day" id="two-days">
+                        <img src="sunny-icon.png" height='75px' width='75px'>
+                        <p class="day-label">Saturday</p>
+                        <strong>67° / 74°</strong>
+                    </div>
+                    <div class="day" id="three-days">
+                        <img src="rain-icon.png" height='75px' width='75px'>
+                        <p class="day-label">Sunday</p>
+                        <strong>69° / 71°</strong>
+                    </div>
+                    <div class="day" id="four-days">
+                        <img src="rain-icon.png"
+                        height='75px' width='75px'>
+                        <p class="day-label">Monday</p>
+                        <strong>71° / 78°</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="lightning">
+                <h4 class="card-desc">Lightning</h4>
+                <div id="lightning-content-area">
+                    <img src="lightning-icon.png" height='75px' width='75px'>
+                    <h1 id="lightning-status" class="med-serif">All clear.</h1>
+                </div>
+                <p id="lightning-message">No lightning detected within <strong>8 miles.</strong></p>
+            </div>
+
+            <div class="card" id="air-quality">
+                <h4 class="card-desc">Air Quality</h4>
+                <h1 class="big-serif">68</h1>
+                <h3 id="aq-moderate-pill" class="stat-pill">Moderate</h2>
+                <p id="air-quality-desc">Air quality is acceptable.</p>
+            </div>
+
+            <div class="card" id="uv">
+                <h4 class="card-desc">UV Index</h4>
+                <h1 class="big-serif">8</h1>
+                <h3 class="stat-pill" id="uv-high-pill">High</h3>
+                <p id="uv-desc">Wear sun protection.</p>
+            </div>
+            
+            <div class="card" id="radar">
+                <h4 class="card-desc">Local Radar</h4>
+                <p id="radar-placeholder">Embedded radar goes here.</p>
+            </div>
+        </div>
+        <p class="credits">Created by Carter Meserve</p>
+        <p class="credits">Data from <a href="https://open-meteo.com">Open-Meteo</a></p>
+    </body>
+</html>
